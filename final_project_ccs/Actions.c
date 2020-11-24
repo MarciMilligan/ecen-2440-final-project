@@ -11,5 +11,6 @@ void Actions(){
     Movement(currentEmotion); //Movement takes current emotion and acts accordingly
     if(currentEmotion == “bored” || currentEmotion == “happy” || currentEmotion == “surprised”){ //If current emotion is one of the emotions that outputs sound
         Piezo(currentEmotion);
+        OLED(currentEmotion);
     }
 }
