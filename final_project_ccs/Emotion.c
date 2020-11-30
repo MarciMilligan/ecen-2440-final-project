@@ -1,20 +1,20 @@
 #include "msp.h"
-#include "Thermister.h"
-#include "IMU.h"
+#include "thermistor.h"
+#include "stlIMU.h"
 
 /**
  * Emotion.c
  */
 string Emotion(){
     string outputEmotion = “neutral”;
-    boolean touch = Thermistor();
+
     boolean plannedMovement = IMU(); //Get whether the movement is going as planned from the IMU
-    if(touch == true){
+    if(pet_check() == 1){ //If being pet, set to happy
         outputEmotion = “happy”;
-}
-if(plannedMovement == false){
-    outputEmotion = “surprised”;
-}
+    }
+    if(plannedMovement == false){
+        outputEmotion = “surprised”;
+    }
     return outputEmotion;
 }
 
