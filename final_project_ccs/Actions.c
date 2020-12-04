@@ -1,7 +1,8 @@
 #include "msp.h"
+#include "Actions.h"
 #include "Emotion.h"
-#include "Movement.h"
-#include "Piezo.h"
+// #include "Movement.h"
+// #include "Piezo.h"
 #include "oled.h"
 #include "bitmaps.h"
 
@@ -11,9 +12,29 @@
  * Created on 11/23/20
  * Code by Joshua Dinerman
  */
+
 void Actions(){
-    string currentEmotion = Emotion(); //Emotion
+    currentEmotion = Emotion(); //Emotion
     //Movement(currentEmotion); //Movement takes current emotion and acts accordingly
     //piezo_noise(currentEmotion);
-    oled_display(currentEmotion);
+    if (currentEmotion != previousEmotion) {
+        switch(currentEmotion) {
+        case NEUTRAL:
+            oled_display(neutral);
+            break;
+        case SCARED:
+            oled_display(scared);
+            break;
+        case HAPPY:
+            oled_display(happy);
+            break;
+        case SURPRISED:
+            oled_display(surprised);
+            break;
+        case BORED:
+            oled_display(bored);
+            break;
+        }
+    }
+    previousEmotion = currentEmotion;
 }

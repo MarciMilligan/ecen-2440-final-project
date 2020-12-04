@@ -10,27 +10,20 @@
 #include "msp.h"
 #include "stdio.h"
 #include <stdint.h>
+#include "Range.h"
 
-int miliseconds = 0;
-int distance = 0;
-long sensor = 0;
 
 void initiateTrigger(void){
 
-
 }
+
 
 static void Delay(uint32_t loop)
 {
     volatile uint32_t i;
-
     for (i = 0 ; i < loop ; i++);
 }
 
-//int main(void){
-//  uint32_t in_range = 0;
-//   range(&in_range);
-//   }
 
 int range(uint32_t* sense_out)
 {
@@ -163,6 +156,7 @@ int uart_puts(const char *str)
     return status;
 }
 
+
 // Timer A0 interrupt service routine
 void PORT2_IRQHandler(void)
 {
@@ -186,6 +180,7 @@ void PORT2_IRQHandler(void)
         P2->IFG &= ~BIT7;             //clear flag
     }
 }
+
 
 void TA0_0_IRQHandler(void)
 {

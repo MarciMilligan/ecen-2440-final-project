@@ -9,4 +9,7 @@
 
 void Actions();
 
+int currentEmotion;
+int previousEmotion;
+
 #endif

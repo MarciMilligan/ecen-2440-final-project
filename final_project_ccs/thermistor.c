@@ -6,9 +6,9 @@
  */
 
 #include "msp.h"
+#include "thermistor.h"
 float ADC_reading; // Analog to Digital Conversion Value
 float thermistor_resistance;
-int8_t pet_check;
 
 void config_analog_pin(void){
     P6->SEL1 |= BIT0; //sets bit SEL1.0 to 1
@@ -37,6 +37,7 @@ int adc_convert(void){
 
 
 int pet_check(void){
+    /*
     val = ADC14->MEM[0];
     if (val <= ???){ //I need to setup and test this
         return 1;
@@ -44,5 +45,6 @@ int pet_check(void){
     else {
         return 0;
     }
+    */
+    return 0;
 }
-

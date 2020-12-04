@@ -1,0 +1,1 @@
+"./Actions.obj" "./Emotion.obj" "./Piezo.obj" "./Range.obj" "./i2c.obj" "./main.obj" "./oled.obj" "./pca9685.obj" "./servo.obj" "./stIMU.obj" "./startup_msp432p401r_ccs.obj" "./system_msp432p401r.obj" "./thermistor.obj" "../msp432p401r.cmd" -llibc.a 

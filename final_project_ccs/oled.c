@@ -7,7 +7,6 @@
  */
 
 #include "oled.h"
-#include "i2c.h"
 
 
 void oled_begin(void) {
