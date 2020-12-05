@@ -8,10 +8,10 @@
 #ifndef PIEZO_H_
 #define PIEZO_H_
 
-#include "Emotion.h"
-
 void config_piezo_pin(void); // configures pin 4.1 to be a digital output
-void piezo_noise(int outputEmotion); //takes outputEmotion and sends signal to piezo to buzz
-void delay(uint16_t time);
+void piezo_noise(char * outputEmotion); //takes outputEmotion and sends signal to piezo to buzz
+
+
+
 
 #endif /* PIEZO_H_ */
