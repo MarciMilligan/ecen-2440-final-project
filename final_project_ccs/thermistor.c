@@ -42,10 +42,10 @@ int adc_convert(void){
 int pet_check(void){
     val = ADC14->MEM[0];
     if (val <= 100){ //I need to setup and test this
-        return 1;
+        return 0;
     }
     else {
-        return 0;
+        return 1;
     }
 }
 
