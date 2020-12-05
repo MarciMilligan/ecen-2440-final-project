@@ -10,6 +10,7 @@
 
 void initiateTrigger(void);
 static void Delay(uint32_t loop);
+void range_begin(void);
 int range(uint32_t* sense_out);
 int uart_puts(const char *str);
 void PORT2_IRQHandler(void);
