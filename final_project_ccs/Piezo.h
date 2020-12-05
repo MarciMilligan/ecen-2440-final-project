@@ -9,7 +9,7 @@
 #define PIEZO_H_
 
 void config_piezo_pin(void); // configures pin 4.1 to be a digital output
-void piezo_noise(char * outputEmotion); //takes outputEmotion and sends signal to piezo to buzz
+void piezo_noise(int outputEmotion); //takes outputEmotion and sends signal to piezo to buzz
 
 
 
