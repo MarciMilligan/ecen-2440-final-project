@@ -34,6 +34,7 @@ void main(void)
 
 	oled_begin();
 	oled_clear();
+	range_begin();
 	//config_piezo_pin();
 	config_LIS3MDL();
 
