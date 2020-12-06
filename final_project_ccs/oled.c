@@ -9,8 +9,8 @@
 #include "oled.h"
 
 
+// Display Init sequence for 64x48 OLED module
 void oled_begin(void) {
-    // Display Init sequence for 64x48 OLED module
     // forming arrays ahead of function call to avoid overwriting before sending via I2C
     uint8_t i2c_buffer_0[] = {I2C_COMMAND, DISPLAYOFF};
     uint8_t i2c_buffer_1[] = {I2C_COMMAND, SETDISPLAYCLOCKDIV};
@@ -63,6 +63,7 @@ void oled_begin(void) {
 }
 
 
+// clear all pixels on display
 void oled_clear(void) {
     int i, j;
     for (i=0;i<6; i++) {
@@ -75,6 +76,7 @@ void oled_clear(void) {
 }
 
 
+// clear display and output bitmap passed in argument
 void oled_display(uint8_t* bitArray) {
     oled_clear();
     int i, j;
@@ -94,6 +96,7 @@ void oled_display(uint8_t* bitArray) {
 }
 
 
+// sets active pixel position to appropriate section
 void oled_setPageAddress(uint8_t add) {
     uint8_t i2c_buffer_0[] = {I2C_COMMAND, 0xB0|add};
     uint8_t i2c_buffer_1[] = {I2C_COMMAND, 0x12};

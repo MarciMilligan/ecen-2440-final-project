@@ -3,6 +3,8 @@
 #include "oled.h"
 #include "stIMU.h"
 #include "i2c.h"
+#include "range.h"
+#include "thermistor.h"
 
 /**
  * main.c
@@ -34,9 +36,13 @@ void main(void)
 
 	oled_begin();
 	oled_clear();
+
 	range_begin();
-	//config_piezo_pin();
+
 	config_LIS3MDL();
+
+	void config_analog_pin();
+	void adc_setup();
 
 	while(true){
 	    Actions();

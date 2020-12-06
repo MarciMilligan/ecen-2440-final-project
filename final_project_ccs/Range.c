@@ -95,7 +95,7 @@ void range_begin()
         //    __low_power_mode_3();
         //    __no_operation();
 
-        *sense_out &= 0;
+        //*sense_out &= 0;
     
 }
 

@@ -6,6 +6,7 @@
  */
 
 #include "msp.h"
+#include "thermistor.h"
 float ADC_reading; // Analog to Digital Conversion Value
 float thermistor_resistance;
 int val;
@@ -31,9 +32,7 @@ return;
 int adc_convert(void){
     ADC14->CTL0 |= 0x00000001;
 
-    while (!ADC14->IFGR0){
-        ;
-    }
+    //while (!ADC14->IFGR0);
     return ADC14->MEM[0];
     //should read analog pin, convert the value (to some sort of hex value) and then store it to ADC14 mem
 }

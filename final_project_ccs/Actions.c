@@ -15,7 +15,6 @@
 
 void Actions(){
     currentEmotion = Emotion(); //Emotion
-    //Movement(currentEmotion); //Movement takes current emotion and acts accordingly
     //piezo_noise(currentEmotion);
     if (currentEmotion != previousEmotion) {
         switch(currentEmotion) {

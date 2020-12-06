@@ -22,4 +22,3 @@ int16_t z_val;
 int Emotion();
 
 #endif
-
