@@ -41,8 +41,8 @@ void main(void)
 
 	config_LIS3MDL();
 
-	void config_analog_pin();
-	void adc_setup();
+	config_analog_pin();
+	adc_setup();
 
 	while(true){
 	    Actions();
